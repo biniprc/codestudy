@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>호텔예약서비스 : 호예</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+		<%= erb :nav %>
+		<% if !session[:email].nil? %>
+		<%= @email_name %> 님이 로그인 하셨습니다.
+		<a href='/logout'>로그 아웃</a>
+		<% end %>
+    <% 1.upto(5) do |x|%>
+		<div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="well">
+          <div class="media">
+            <a class="pull-left" href="#">
+							<img class="media-object" src="http://imagizer.imageshack.us/v2/150x100q90/907/wkvloM.jpg" alt="...">
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading">서울에서 전망좋은 호텔</h4>
+              내가 제일 좋아하는 호텔입니다.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+		<% end %>
+		<%= erb :footer %>
+    </body>
+</html>
+

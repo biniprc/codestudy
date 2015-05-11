@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>관리자 페이지 입니다.</p>
+<ul>
+<% @users.each do |x| %>
+	<li>
+		<%= x.user_email %>, <%= x.user_password %>
+		<a href="/user_delete/<%= x.id %>">[x]</a>
+	</li>
+<% end %>
+</ul>
+</body>
+</html>
